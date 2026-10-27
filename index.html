@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Geométrico de Video IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <!-- Visualizador de Video -->
+        <section class="visualizer-section">
+            <canvas id="videoCanvas" width="1280" height="720"></canvas>
+            <div class="controls">
+                <button id="btnPlay">▶ Play</button>
+                <button id="btnPause">⏸ Pause</button>
+                <input type="range" id="progressBar" min="0" max="100" value="0">
+                <button id="btnDownload">Descargar Video</button>
+            </div>
+        </section>
+
+        <!-- Terminal de Mandos / Prompt -->
+        <section class="prompt-section">
+            <h2>Terminal de Comandos</h2>
+            <textarea id="promptInput" placeholder="Ej: Un auto rojo cruzando la ciudad de noche..."></textarea>
+            <div class="prompt-actions">
+                <button id="btnGenerate" class="primary-btn">Generar Animación</button>
+            </div>
+            <div id="promptHistory" class="history-panel">
+                <h3>Historial</h3>
+                <!-- Aquí se inyectarán los prompts anteriores -->
+            </div>
+        </section>
+    </main>
+    <script src="game.js"></script>
+</body>
+</html>
